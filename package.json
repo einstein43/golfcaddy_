@@ -1,4 +1,6 @@
 {
+  "type": "commonjs",
+  "module": "commonjs",
   "name": "golfcaddy",
   "version": "0.1.0",
   "private": true,
@@ -9,16 +11,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.11.0",
+    "@prisma/client": "^4.5.0",
+    "bootstrap": "^5.2.1",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "react-player": "^2.11.0"
   },
   "devDependencies": {
     "@types/node": "18.7.18",
-    "@types/react": "18.0.20",
-    "@types/react-dom": "18.0.6",
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-native": "^0.70.3",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.1",
+    "prisma": "^4.5.0",
     "typescript": "4.8.3"
   }
 }

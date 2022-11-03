@@ -1,0 +1,114 @@
+.video1 {
+  position: relative;
+  width: fit-content;
+  max-width: max-content;
+  display: inline-block;
+}
+
+.videoheader {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 90px;
+  color: #E5E5E5;
+  font-weight: 400;
+
+}
+
+.videobutton {
+    position: absolute;
+    top: 60%;
+    color: #276497;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Barlow Condensed', sans-serif;
+font-size: 25px;
+}
+
+
+
+.videoparagraph {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 60px;
+  color: #85C872;
+}
+
+.video2 {
+    position: relative;
+    height: 650px;
+    width: 800px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.video2div {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+}
+
+.image_1 {
+    position: absolute;
+    display: inline-block;
+    margin-top: 100px;
+    left: 30%;
+}
+
+.explore_div {
+    display: inline-block;
+    left: 50%;
+}
+
+
+
+.p_explore {
+    top: 40px;
+    position: absolute;
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+}
+.p_explore_1 {
+    top: 110px;
+    left: 51%;
+    position: absolute;
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    color: grey;
+}
+.p_explore_2 {
+    top: 170px;
+    left: 51%;
+    position: absolute;
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    color: grey;
+}
+.p_explore_3 {
+    top: 230px;
+    left: 51%;
+    position: absolute;
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    color: grey;
+}
+.p_explore_4 {
+    top: 290px;
+    left: 48%;
+    position: absolute;
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    color: grey;
+    
+}

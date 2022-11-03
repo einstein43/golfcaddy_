@@ -1,0 +1,15 @@
+.p_possibilities {
+    font-size: 50px;
+    font-family: 'Barlow Condensed', sans-serif;
+    
+    position: absolute;
+    display: inline-block;
+}
+
+.between_div {
+    display: block;
+}
+
+.explore_div {
+    
+}

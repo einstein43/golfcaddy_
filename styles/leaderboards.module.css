@@ -1,0 +1,67 @@
+.wrapper_div {
+  display: grid;
+  grid-template-columns: auto;
+  background-color: white;
+}
+
+.leaderboard_card {
+  background-color: lightgrey;
+  display: grid;
+  padding-left: 20px;
+  grid-template-columns: auto auto auto auto;
+}
+
+.card_head {
+  color: red;
+}
+.card_num {
+  color: blue;
+}
+
+#card_name {
+  grid-area: 1/1;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+
+#card_name_num {
+  grid-area: 2/1;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+}
+
+#card_rank {
+  grid-area: 1/2;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+
+#card_rank_num {
+  grid-area: 2/2;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+}
+
+#card_handicap {
+  grid-area: 1/3;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+
+#card_handicap_num {
+  grid-area: 2/3;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+}
+
+#card_score {
+  grid-area: 1/4;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+
+#card_score_num {
+  grid-area: 2/4;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+}
