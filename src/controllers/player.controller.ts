@@ -36,7 +36,7 @@ export class PlayerController implements IPlayerController {
   }
 
   public async addPlayersToCard(req: Request, res: Response) {
-    const player = await this.playerService.addPlayersToCard();
-    res.status(200).send(player);
+    const players = await this.playerService.addPlayersToCard();
+    res.status(200).send(players);
   }
 }

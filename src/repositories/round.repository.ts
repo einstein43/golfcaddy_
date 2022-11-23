@@ -38,6 +38,7 @@ export default class RoundRepository implements IRoundRepository {
       database: "golfcaddy",
       ssl: false,
     });
+
     connection.connect();
 
     console.log(playerName + " is added to the active round");
