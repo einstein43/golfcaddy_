@@ -3,6 +3,7 @@ import classNames from "classNames";
 import { useState, useEffect } from "react";
 import Player from "../components/interfaces/player.interface";
 import Players from "../pages/players";
+import { exceptions } from "./errors/exceptions";
 
 function Leaderboards() {
   const [players, setPlayers] = useState<Player[]>();
@@ -14,13 +15,15 @@ function Leaderboards() {
   }, []);
 
   //methode om speler data op te halen van de API
-
   //NOG TE DOEN: zorgen dat de parameter in de route komt en dat je zo verschillende spelers op kan halen
   const getAllData = async () => {
     try {
       const response = await fetch(`http://localhost:3001/players`);
       if (!response.ok) {
-        throw new Error("This is an HTTP error: the status is ${error}");
+        let error = new exceptions("This is an HTTP error");
+        if (error instanceof exceptions) {
+          console.log(error.sayHello());
+        } else throw new Error(`This is an HTTP error: the status is ${error}`);
       }
 
       const data = await response.json();
@@ -30,6 +33,7 @@ function Leaderboards() {
       setError(null);
     } catch (err: any) {
       setError(err.message);
+      console.log(err.message);
     } finally {
       setLoading(false);
     }

@@ -46,6 +46,10 @@ function Navbar() {
             <li className={classNames(styles.lijst_1_li)}>
               <Link href="http://localhost:3000/leaderboard">LEADERBOARD</Link>
             </li>
+
+            <li className={classNames(styles.lijst_1_li)}>
+              <Link href="http://localhost:3000/score">SCORE</Link>
+            </li>
           </ul>
 
           <ul className={styles.signup}>
