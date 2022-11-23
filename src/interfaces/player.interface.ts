@@ -3,13 +3,19 @@ import Player from "../models/player.model";
 import { PlayerController } from "../controllers/player.controller";
 
 export interface IPlayerService {
-  getPlayer(id: number): Promise<Player>;
+  getPlayerById(id: number): Promise<Player>;
+  getAllPlayers(): Promise<Player[]>;
+  addPlayersToCard(): Promise<Player[]>;
 }
 
 export interface IPlayerController {
-  getPlayer(req: Request, res: Response): Promise<void> ;
+  getPlayerById(req: Request, res: Response): Promise<void>;
+  getAllPlayers(req: Request, res: Response): Promise<void>;
+  addPlayersToCard(req: Request, res: Response): Promise<void>;
 }
 
 export interface IPlayerRepository {
-  getPlayer(id: number): Promise<Player>;
+  getPlayerById(id: number): Promise<Player>;
+  getAllPlayers(): Promise<Player[]>;
+  addPlayersToCard(): Promise<Player[]>;
 }
