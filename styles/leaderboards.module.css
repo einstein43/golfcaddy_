@@ -17,6 +17,9 @@
 .card_num {
   color: blue;
 }
+.card_num ~ .card_num {
+  margin-top: 25px;
+}
 
 #card_name {
   grid-area: 1/1;
@@ -64,4 +67,28 @@
   grid-area: 2/4;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 15px;
+}
+
+#table {
+  width: 100%;
+  border: 1px solid;
+  text-align: center;
+  border-collapse: collapse;
+  margin-top: 25px;
+  margin-left: 50%;
+  transform: translateX(-25%);
+  color: white;
+}
+
+#table_head_color {
+  background-color: #85c872;
+  color: white;
+}
+
+#table_body {
+  border: 1px solid;
+}
+
+.table_head {
+  border: 1px solid;
 }
