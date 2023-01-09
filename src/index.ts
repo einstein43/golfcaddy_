@@ -19,7 +19,7 @@ const roundController = container.resolve(RoundControler);
 const scoreController = container.resolve(ScoreController);
 
 // Route
-//godverdomme verplaatsen deze handel
+
 
 app.get("/player", (req: Request, res: Response) => {
   playerController.getPlayerById(req, res);

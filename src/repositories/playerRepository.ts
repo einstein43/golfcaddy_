@@ -65,10 +65,10 @@ export default class PlayerRepository implements IPlayerRepository {
     });
   }
 
-  public async addPlayersToCard(): Promise<Player[]> {
+  public async addPlayersToCard(id: string): Promise<Player[]> {
     
   
-    console.log(`Request made to add players to card`);
+    console.log(`Request made for the rounds of player: ${id}`);
     const mysql = require("mysql");
     var connection = mysql.createConnection({
       host: "localhost",
@@ -82,7 +82,8 @@ export default class PlayerRepository implements IPlayerRepository {
 
     return new Promise((resolve, reject) => {
       connection.query(
-        "SELECT player1, player2, player3, player4 FROM golfcaddy.active_round WHERE idactive_round_id = 1",
+        //PLACEHOLDER TOEVOEGEN
+        "SELECT course, player1, score FROM golfcaddy.active_round WHERE idactive_round_id = ?",id,
 
         (err: string, res: Player[]) => {
           if (err) reject(err);

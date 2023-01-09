@@ -5,7 +5,7 @@ import { PlayerController } from "../controllers/player.controller";
 export interface IPlayerService {
   getPlayerById(id: number): Promise<Player>;
   getAllPlayers(): Promise<Player[]>;
-  addPlayersToCard(): Promise<Player[]>;
+  addPlayersToCard(id: string): Promise<Player[]>;
 }
 
 export interface IPlayerController {
@@ -17,5 +17,5 @@ export interface IPlayerController {
 export interface IPlayerRepository {
   getPlayerById(id: number): Promise<Player>;
   getAllPlayers(): Promise<Player[]>;
-  addPlayersToCard(): Promise<Player[]>;
+  addPlayersToCard(id: string): Promise<Player[]>;
 }

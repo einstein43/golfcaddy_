@@ -20,6 +20,7 @@ export default class RoundRepository implements IRoundRepository {
     connection.connect();
 
     const round = connection.query(
+      //PLACEHOLDER TOEVOEGEN
       `SELECT round FROM golfcaddy.rounds WHERE id = ${id} `
     );
 
@@ -43,6 +44,7 @@ export default class RoundRepository implements IRoundRepository {
 
     console.log(playerName + " is added to the active round");
     connection.query(
+      //PLACEHOLDER TOEVOEGEN
       `UPDATE golfcaddy.active_round SET player1 = '${playerName}' WHERE idactive_round_id = 1`
     );
 

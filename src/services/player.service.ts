@@ -9,6 +9,7 @@ container.register("IPlayerRepository", {
   useClass: PlayerRepository,
 });
 
+
 @injectable()
 export class PlayerService implements IPlayerService {
   constructor(
@@ -17,6 +18,7 @@ export class PlayerService implements IPlayerService {
     this.getPlayerById = this.getPlayerById.bind(this);
     this.getAllPlayers = this.getAllPlayers.bind(this);
   }
+
 
   public async getPlayerById(id: number) {
     const player: Player = await this.playerRepository.getPlayerById(id);
@@ -32,8 +34,8 @@ export class PlayerService implements IPlayerService {
     return player;
   }
 
-  public async addPlayersToCard() {
-    const players: Player[] = await this.playerRepository.addPlayersToCard();
+  public async addPlayersToCard(id: string) {
+    const players: Player[] = await this.playerRepository.addPlayersToCard(id);
     return players;
   }
   
