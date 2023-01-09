@@ -27,7 +27,7 @@
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 100px;
-  background-color: blue;
+  background-color: darkgrey;
   grid-area: 2/1;
   height: 300px;
   justify-content: center;
@@ -66,8 +66,6 @@
   grid-area: 1/5;
 }
 
-
-
 #form {
   color: white;
 }
@@ -86,7 +84,21 @@
 }
 
 .button {
-  height: 120px;
-  width: 60px;
+  margin-top: 150px;
+  height: 30px;
+  width: 120px;
   margin-left: 100px;
+}
+
+.button:hover{
+  cursor: grab;
+}
+
+
+.input {
+  margin-top: 150px;
+  height: 30px;
+  width: 120px;
+  margin-right: 25px;
+  margin-left: 5px;
 }

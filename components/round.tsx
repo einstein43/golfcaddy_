@@ -27,15 +27,34 @@ function Round() {
     watch,
     formState: { errors },
   } = useForm<Inputs>();
+  
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   const [playerCard, setPlayerCard] = useState<activePlayer[]>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   console.log(watch("course"));
 
-  const getPlayercards = async () => {
+
+  let input: string;
+
+  const [playerId, setPlayerId] = useState<number>(0)
+
+  const handleChange = (e: any) => {
+    const value = e.target.value
+
+    if (value === '') {
+      setPlayerId(0)
+    } else {
+      setPlayerId(parseInt(value))
+    }
+  }
+
+
+  const getPlayercards = async (id: string) => {
+   
+
     try {
-      const response = await fetch(`http://localhost:3001/activeplayer`);
+      const response = await fetch(`http://localhost:3001/activeplayer?id=${playerId}`);
       if (!response.ok) {
         throw new Error(`This is an HTTP error: the status is ${error}`);
       }
@@ -56,9 +75,14 @@ function Round() {
     <>
       <div className={styles.wrapper_div}>
         <div className={styles.playercards_div}>
-          <button className={styles.button} onClick={() => getPlayercards()}>
-            Refresh players
+          <button className={styles.button} onClick={() => getPlayercards(input)}>
+            Get info for round:
           </button>
+          <input className={classNames(styles.input)}
+            type="text" 
+            id="inputText"
+            onChange={handleChange}
+          />
           <h3>
             {playerCard &&
               playerCard.map((player, index) => (
@@ -69,32 +93,11 @@ function Round() {
                       src="/images/userimage.png"
                       alt=""
                     />
-                    {player.player1}
+                    Player:{player.player1},
+                    Course:{player.course},
+                    Score:{player.score}
                   </div>
-                  <div className={styles.playercard_2}>
-                    <img
-                      className={styles.playercard_img}
-                      src="/images/userimage.png"
-                      alt=""
-                    />
-                    {player.player2}
-                  </div>
-                  <div className={styles.playercard_3}>
-                    <img
-                      className={styles.playercard_img}
-                      src="/images/userimage.png"
-                      alt=""
-                    />
-                    {player.player3}
-                  </div>
-                  <div className={styles.playercard_4}>
-                    <img
-                      className={styles.playercard_img}
-                      src="/images/userimage.png"
-                      alt=""
-                    />
-                    {player.player4}
-                  </div>
+                  
                 </div>
               ))}
           </h3>
@@ -123,10 +126,10 @@ function Round() {
               errors.course && <span>Je bent de course vergeten lijer</span> &&
               errors.starting_hole && (
                 <span id={styles.span}>
-                  Alle velden moete ingevuld worden lijer
+                  Alle velden moeten ingevuld worden!!!!
                 </span>
               )}
-              <label htmlFor="verzendknop">Send</label>
+              <label htmlFor="verzendknop"></label>
             <input id="verzendknop" type="submit" />
           </form>
         </div>
