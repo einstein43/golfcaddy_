@@ -26,7 +26,7 @@ export default function Layout({ children, home }: Proptypes) {
       <div className={classNames(styles.wrapper_div)}>
         <Navbar />
         <main style={styles}>
-          <section style={{ width: "1024px" }}>{children}</section>
+          <section >{children}</section>
         </main>
         
       </div>
