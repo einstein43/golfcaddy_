@@ -36,6 +36,7 @@ app.get("/rounds", (req: Request, res: Response) => {
 app.post("/activeround", async (req: Request, res: Response) => {
   return await roundController.addPlayerToRound(req, res);
 });
+
 app.get("/activeplayer", async (req: Request, res: Response) => {
   return await playerController.addPlayersToCard(req, res);
 });
@@ -43,5 +44,10 @@ app.get("/activeplayer", async (req: Request, res: Response) => {
 app.post("/setscore", async (req: Request, res: Response) => {
   return await scoreController.setScoreForPlayer(req, res);
 });
+
+
+app.post("/updatescore", async (req: Request, res: Response) => {
+  return await scoreController.updateScoreForPlayer(req,res);
+})
 
 app.listen(3001, () => console.log("app listening on port 3001"));
